@@ -16,8 +16,11 @@ To know more on the operational features of the above three methods refer the se
 Create a package using: 
 
 $ mkdir -p catkin_ws/src
+
 $ cd catkin_make
+
 $ git clone https://github.com/aayush11101998/Assignment-3_RT-1.git
+
 $ cd ..
 
 now put "$ source /opt/ros/noetic/setup.bash" in your ".bashrc" file.
@@ -46,17 +49,17 @@ if in case user wants to use another modality he/she needs to press ctrl-c and s
 
 ##  OPERATIONAL FEATURES
 
-# 1. FOR TELEOP_KEYBOARD.
+### 1. FOR TELEOP_KEYBOARD.
 we use the keys "u","i","o","j","k","l","m",",","." 
 "u" makes the robot to turn left while moving forward, "i" makes the robot move forward in a straight line, "o" makes the robot turn right while moving forward.
 "j" makes robot turn left "k" stops the moving robot and "l" makes the robot turn right.
 "m" makes the robot turn left while moving backwards, "," makes the robot go back in a straight line and "." make the robot turn right while going backwards. 
 Keys "q" "w" "e" "z" "x" "c" are used to increase and decrease the speed of robot moving forward turning lewft and right.
  
-# 2. OBSTACLE AVOIDANCE USING TELEOP.
+### 2. OBSTACLE AVOIDANCE USING TELEOP.
 User chosing this modality can still use the teleop keys that are mentioned above but now the robot stops when it comes close to the obstacles in order to avoid collision.
 
-# 3. AUTONOMOUS ROBOT REACHING THE TARGET POINTS DESCRIBED BY THE USER.
+### 3. AUTONOMOUS ROBOT REACHING THE TARGET POINTS DESCRIBED BY THE USER.
 User is asked to give coordinates of x and y where the robot must go the points however they should lie within the map once points are defined the robot autonomously tries to reach to the given coordinates.
 
 ## METHODOLOGY
@@ -67,20 +70,20 @@ I used three different code structures to define the above modalities:
 2. Move_base.py
 3. teleop_keyboard.py
 
-# Assignment3.py:
+### Assignment3.py:
 
 This program is used to activate the other two programs that contains the control modalities of the robot I used the " $ rospy.set_ param" command to set parameters to store the string values which actives the robot state when i use the "rospy.get_param" ultimately resulting in the activation of modalities.
 
-# move_base.py
+### move_base.py
 
 This program works using the action server/client. I activate the necessary topics needed for the program to work smoothly using SimpleActionClient. This enables commands like MoveBaseGoal() used to define the goal, send_ goal() used to send goal to server etc.
 Once the user press "s" this program is activated else not, it asks user to define the coordinates which are defined as goal. It then waits for the server to listen to the goals and once the server is ready it sends the goal which in turn makes the robot move in the direction of the goal. I also defined the initial distance that robot need to cover and the initial position of the robot as well. 
 
-# teleop_keyboard.py
+### teleop_keyboard.py
 
 Most of the code is taken from another github code but using the set_param and get_param commands in main() I enabled the remaining modalities that the user can use to control robot. Since we are using obstacle avoidance I used the laserscan msgs and devided the given data into three parts which scan the three regions of the robot namely left right and center. For the obstacle avoidance part whenever one part of the laserscan data shows less values then a predefined value our robot detects obstacles and immediately stops as i made its velocity in that direction 0, forcing the user to use another key to move the robot. With the use of publish subscribe, the publish can be regarded as a speaker which tells some information that subscriber regarded as listener grabs and works upon accordingly.
 
 ## SOFTWARE ARCHITECTURE
+[image1](https://github.com/aayush11101998/Assignment-3_RT-1/blob/master/images/Screenshot%20from%202022-06-29%2016-55-41.png)
 
-put image here.
 

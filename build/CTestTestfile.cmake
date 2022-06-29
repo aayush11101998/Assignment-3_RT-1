@@ -1,0 +1,10 @@
+# CMake generated Testfile for 
+# Source directory: /home/aayush/rstrack/assignment-3/src
+# Build directory: /home/aayush/rstrack/assignment-3/build
+# 
+# This file includes the relevant testing commands required for 
+# testing this directory and lists subdirectories to be tested as well.
+subdirs("gtest")
+subdirs("slam_gmapping/slam_gmapping")
+subdirs("final")
+subdirs("slam_gmapping/gmapping")

@@ -1,0 +1,2 @@
+final:slam_gmapping/gmapping:slam_gmapping/slam_gmapping
+-DCATKIN_DEVEL_PREFIX=/home/aayush/rstrack/assignment-3/devel -DCMAKE_INSTALL_PREFIX=/home/aayush/rstrack/assignment-3/install -G Unix Makefiles

@@ -1,9 +1,9 @@
 # assignment-3_Research_Track-1
 
-##ABSTRACT
+## ABSTRACT
 This assignment is a robotic simulation on Gazebo and Rviz with our robot being controlled in different ways in the given environment.
 
-##INTRODUCTION
+## INTRODUCTION
 A software architecture to control the robot is being programmed. User can control the robot with three possible ways.
 1. Use keyboard keys.
 2. Use keyboard keys with obstacle avoidance assistance.
@@ -11,7 +11,7 @@ A software architecture to control the robot is being programmed. User can contr
 
 To know more on the operational features of the above three methods refer the sections below.
 
-##INSTALLATION & RUNNING
+## INSTALLATION & RUNNING
 
 Create a package using: 
 

@@ -51,6 +51,7 @@ if in case user wants to use another modality he/she needs to press ctrl-c and s
 
 ### 1. FOR TELEOP_KEYBOARD.
 we use the keys "u","i","o","j","k","l","m",",","." 
+
 "u" makes the robot to turn left while moving forward, "i" makes the robot move forward in a straight line, "o" makes the robot turn right while moving forward.
 "j" makes robot turn left "k" stops the moving robot and "l" makes the robot turn right.
 "m" makes the robot turn left while moving backwards, "," makes the robot go back in a straight line and "." make the robot turn right while going backwards. 
@@ -84,6 +85,6 @@ Once the user press "s" this program is activated else not, it asks user to defi
 Most of the code is taken from another github code but using the set_param and get_param commands in main() I enabled the remaining modalities that the user can use to control robot. Since we are using obstacle avoidance I used the laserscan msgs and devided the given data into three parts which scan the three regions of the robot namely left right and center. For the obstacle avoidance part whenever one part of the laserscan data shows less values then a predefined value our robot detects obstacles and immediately stops as i made its velocity in that direction 0, forcing the user to use another key to move the robot. With the use of publish subscribe, the publish can be regarded as a speaker which tells some information that subscriber regarded as listener grabs and works upon accordingly.
 
 ## SOFTWARE ARCHITECTURE
-[image1](https://github.com/aayush11101998/Assignment-3_RT-1/blob/master/images/Screenshot%20from%202022-06-29%2016-55-41.png)
+![image1](https://github.com/aayush11101998/Assignment-3_RT-1/blob/master/images/Screenshot%20from%202022-06-29%2016-55-41.png)
 
 
